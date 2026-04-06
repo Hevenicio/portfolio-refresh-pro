@@ -6,50 +6,56 @@
 
 @layer base {
   :root {
-    --background: 180 15% 12%;
-    --foreground: 160 80% 95%;
+    /* Background: #2d2e32 dark gray */
+    --background: 230 6% 19%;
+    --foreground: 160 30% 90%;
 
-    --card: 180 12% 16%;
-    --card-foreground: 160 80% 95%;
+    /* Cards: slightly lighter dark */
+    --card: 230 6% 22%;
+    --card-foreground: 160 30% 90%;
 
-    --popover: 180 12% 16%;
-    --popover-foreground: 160 80% 95%;
+    --popover: 230 6% 22%;
+    --popover-foreground: 160 30% 90%;
 
-    --primary: 152 89% 67%;
+    /* Primary: #64f4ac mint green */
+    --primary: 152 87% 67%;
     --primary-foreground: 165 90% 10%;
 
-    --secondary: 180 10% 22%;
-    --secondary-foreground: 160 80% 95%;
+    /* Secondary: #a0b1b1 muted teal */
+    --secondary: 180 10% 66%;
+    --secondary-foreground: 165 90% 10%;
 
-    --muted: 180 8% 25%;
-    --muted-foreground: 180 5% 55%;
+    /* Muted: gray tones from original */
+    --muted: 230 4% 30%;
+    --muted-foreground: 230 3% 50%;
 
-    --accent: 165 90% 10%;
-    --accent-foreground: 152 89% 67%;
+    /* Accent: #02312b deep forest */
+    --accent: 170 93% 10%;
+    --accent-foreground: 152 87% 67%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 180 10% 20%;
-    --input: 180 10% 20%;
-    --ring: 152 89% 67%;
+    --border: 230 5% 26%;
+    --input: 230 5% 26%;
+    --ring: 152 87% 67%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 180 15% 10%;
-    --sidebar-foreground: 160 80% 95%;
-    --sidebar-primary: 152 89% 67%;
+    --sidebar-background: 230 6% 16%;
+    --sidebar-foreground: 160 30% 90%;
+    --sidebar-primary: 152 87% 67%;
     --sidebar-primary-foreground: 165 90% 10%;
-    --sidebar-accent: 180 10% 18%;
-    --sidebar-accent-foreground: 160 80% 95%;
-    --sidebar-border: 180 10% 20%;
-    --sidebar-ring: 152 89% 67%;
+    --sidebar-accent: 230 5% 24%;
+    --sidebar-accent-foreground: 160 30% 90%;
+    --sidebar-border: 230 5% 26%;
+    --sidebar-ring: 152 87% 67%;
 
     /* Custom tokens */
     --font-heading: 'Raleway', sans-serif;
     --font-mono: 'Source Code Pro', monospace;
-    --gradient-hero: linear-gradient(135deg, hsl(152 89% 67%), hsl(160 70% 45%));
-    --shadow-glow: 0 0 30px hsl(152 89% 67% / 0.2);
+    --gradient-hero: linear-gradient(135deg, hsl(152 87% 67%), hsl(170 93% 10%));
+    --shadow-glow: 0 0 30px hsl(152 87% 67% / 0.2);
   }
 }
 
