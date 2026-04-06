@@ -6,60 +6,50 @@
 
 @layer base {
   :root {
-    /* Background: white / light gray */
-    --background: 0 0% 100%;
-    --foreground: 170 93% 10%;
+    --background: 180 15% 12%;
+    --foreground: 160 80% 95%;
 
-    /* Cards: very light gray */
-    --card: 210 20% 98%;
-    --card-foreground: 170 93% 10%;
+    --card: 180 12% 16%;
+    --card-foreground: 160 80% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 170 93% 10%;
+    --popover: 180 12% 16%;
+    --popover-foreground: 160 80% 95%;
 
-    /* Primary: #02312b deep forest green — titles, text */
-    --primary: 170 93% 10%;
-    --primary-foreground: 152 87% 67%;
+    --primary: 152 89% 67%;
+    --primary-foreground: 165 90% 10%;
 
-    /* Secondary: soft gray */
-    --secondary: 210 15% 93%;
-    --secondary-foreground: 170 93% 10%;
+    --secondary: 180 10% 22%;
+    --secondary-foreground: 160 80% 95%;
 
-    /* Muted */
-    --muted: 210 15% 96%;
-    --muted-foreground: 215 10% 45%;
+    --muted: 180 8% 25%;
+    --muted-foreground: 180 5% 55%;
 
-    /* Accent: #64f4ac mint green — buttons, hover, highlights */
-    --accent: 152 87% 67%;
-    --accent-foreground: 170 93% 10%;
+    --accent: 165 90% 10%;
+    --accent-foreground: 152 89% 67%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 214 15% 90%;
-    --input: 214 15% 90%;
-    --ring: 152 87% 67%;
+    --border: 180 10% 20%;
+    --input: 180 10% 20%;
+    --ring: 152 89% 67%;
 
     --radius: 0.75rem;
 
-    /* Section alternating bg */
-    --section-alt: 210 20% 98%;
-
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 170 93% 10%;
-    --sidebar-primary: 152 87% 67%;
-    --sidebar-primary-foreground: 170 93% 10%;
-    --sidebar-accent: 210 15% 96%;
-    --sidebar-accent-foreground: 170 93% 10%;
-    --sidebar-border: 214 15% 90%;
-    --sidebar-ring: 152 87% 67%;
+    --sidebar-background: 180 15% 10%;
+    --sidebar-foreground: 160 80% 95%;
+    --sidebar-primary: 152 89% 67%;
+    --sidebar-primary-foreground: 165 90% 10%;
+    --sidebar-accent: 180 10% 18%;
+    --sidebar-accent-foreground: 160 80% 95%;
+    --sidebar-border: 180 10% 20%;
+    --sidebar-ring: 152 89% 67%;
 
     /* Custom tokens */
     --font-heading: 'Raleway', sans-serif;
     --font-mono: 'Source Code Pro', monospace;
-    --gradient-hero: linear-gradient(135deg, hsl(170 93% 10%), hsl(152 87% 67%));
-    --shadow-glow: 0 0 30px hsl(152 87% 67% / 0.15);
-    --shadow-card: 0 4px 20px hsl(170 93% 10% / 0.06);
+    --gradient-hero: linear-gradient(135deg, hsl(152 89% 67%), hsl(160 70% 45%));
+    --shadow-glow: 0 0 30px hsl(152 89% 67% / 0.2);
   }
 }
 
@@ -87,14 +77,6 @@
   .glow-shadow {
     box-shadow: var(--shadow-glow);
   }
-
-  .card-shadow {
-    box-shadow: var(--shadow-card);
-  }
-
-  .section-alt {
-    background-color: hsl(var(--section-alt));
-  }
 }
 
 /* Typewriter cursor */
@@ -106,7 +88,7 @@
 .typewriter-cursor::after {
   content: '|';
   animation: blink 1s step-end infinite;
-  color: hsl(var(--accent));
+  color: hsl(var(--primary));
 }
 
 /* Smooth scrolling */

@@ -45,12 +45,12 @@ const HeroSection = () => {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground transition-all duration-300 hover:text-accent hover:scale-110"
+            className="text-muted-foreground transition-all duration-300 hover:text-primary hover:scale-110"
           >
             <Icon size={20} />
           </a>
         ))}
-        <div className="w-px h-20 bg-border mx-auto" />
+        <div className="w-px h-20 bg-muted-foreground/30 mx-auto" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-20">
@@ -61,28 +61,19 @@ const HeroSection = () => {
               {personalInfo.roles.slice(0, 2).map((role) => (
                 <span
                   key={role}
-                  className="px-3 py-1 text-xs font-mono font-semibold rounded-full bg-accent/15 text-primary border border-accent/30"
+                  className="px-3 py-1 text-xs font-mono font-semibold rounded bg-accent text-accent-foreground"
                 >
                   {role}
                 </span>
               ))}
             </div>
 
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary">
-              {personalInfo.headline.split("Magic").map((part, i) =>
-                i === 0 ? (
-                  <span key={i}>
-                    {part}
-                    <span className="text-accent">Magic</span>
-                  </span>
-                ) : (
-                  <span key={i}>{part}</span>
-                )
-              )}
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+              {personalInfo.headline}
             </h1>
 
             {/* Typewriter */}
-            <div className="font-mono text-lg text-accent">
+            <div className="font-mono text-lg text-primary">
               <span>{displayText}</span>
               <span className="typewriter-cursor" />
             </div>
@@ -95,7 +86,7 @@ const HeroSection = () => {
             <div className="flex gap-10 pt-4">
               {personalInfo.stats.map((stat) => (
                 <div key={stat.label} className="flex items-start gap-3">
-                  <span className="text-4xl font-heading font-bold text-accent">
+                  <span className="text-4xl font-heading font-bold text-primary">
                     {stat.value}
                   </span>
                   <span className="text-xs font-mono text-muted-foreground whitespace-pre-line leading-tight pt-2">
@@ -108,10 +99,10 @@ const HeroSection = () => {
 
           {/* Right side - decorative */}
           <div className="hidden lg:flex items-center justify-center relative">
-            <div className="w-80 h-80 rounded-full bg-accent/10 glow-shadow animate-float" />
-            <div className="absolute w-60 h-60 rounded-full border border-accent/20 animate-float" style={{ animationDelay: "1s" }} />
-            <div className="absolute w-40 h-40 rounded-full border border-accent/10 animate-float" style={{ animationDelay: "2s" }} />
-            <div className="absolute font-mono text-6xl font-bold text-primary/15">{"</>"}</div>
+            <div className="w-80 h-80 rounded-full bg-primary/10 glow-shadow animate-float" />
+            <div className="absolute w-60 h-60 rounded-full border border-primary/20 animate-float" style={{ animationDelay: "1s" }} />
+            <div className="absolute w-40 h-40 rounded-full border border-primary/10 animate-float" style={{ animationDelay: "2s" }} />
+            <div className="absolute font-mono text-6xl font-bold text-primary/20">{"</>"}</div>
           </div>
         </div>
       </div>
