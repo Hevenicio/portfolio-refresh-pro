@@ -6,11 +6,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/90 backdrop-blur-xl">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-1 font-heading text-xl">
-          <span className="font-bold text-primary">{personalInfo.firstName}</span>
-          <span className="font-light text-foreground">{personalInfo.lastName}</span>
+          <span className="font-black text-primary">{personalInfo.firstName.toUpperCase()}</span>
+          <span className="font-light text-accent">{personalInfo.lastName.toUpperCase()}</span>
         </div>
 
         {/* Desktop */}
@@ -19,7 +19,7 @@ const Navbar = () => {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-mono text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                className="font-mono text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
               >
                 {link.label}
               </a>
@@ -29,7 +29,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-primary"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -44,7 +44,7 @@ const Navbar = () => {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="font-mono text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                  className="font-mono text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
