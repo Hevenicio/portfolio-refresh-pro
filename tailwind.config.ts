@@ -12,8 +12,20 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      heading: ['Raleway', 'sans-serif'],
+      mono: ['Source Code Pro', 'monospace'],
+    },
     extend: {
       colors: {
+        forest: {
+          DEFAULT: "hsl(165, 90%, 10%)",
+          light: "hsl(180, 15%, 40%)",
+        },
+        mint: {
+          DEFAULT: "hsl(152, 89%, 67%)",
+          dark: "hsl(160, 70%, 45%)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
