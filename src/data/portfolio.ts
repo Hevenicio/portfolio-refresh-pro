@@ -1,106 +1,147 @@
 export const personalInfo = {
   firstName: "Hevenicio",
   lastName: "Silva",
-  roles: ["Físico", "Cientista de Dados Junior", "Full Stack Developer"],
-  headline: "Full Stack Wizard: Coding and Designing Magic",
+  roles: ["Cientista de Dados", "Desenvolvedor de IA", "Físico"],
+  headline: "Cientista de Dados & Desenvolvedor de IA",
   description:
-    "Explorando e compreendendo o passado, analisando e modelando o presente, estimando e prevendo o futuro por meio de dados.",
-  email: "venn19phys@gmail.com",
+    "Possuo habilidade em aprender novas linguagens e ferramentas de programação. Ótima capacidade de concentração e organização, bem como facilidade para trabalhar em equipe.",
+  email: "venn19@hotmail.com.br",
+  phone: "(61) 99285-9117",
   location: "Brasília, DF",
   stats: [
-    { value: "6", label: "ANOS DE\nEXPERIÊNCIA" },
-    { value: "5", label: "PROJETOS\nCOMPLETOS" },
+    { value: "7+", label: "ANOS DE\nEXPERIÊNCIA" },
+    { value: "6+", label: "PROJETOS\nPROFISSIONAIS" },
   ],
   socials: {
-    linkedin: "https://br.linkedin.com/in/hevenicio",
+    linkedin: "https://linkedin.com/in/hevenicio",
     github: "https://github.com/Hevenicio",
-    email: "mailto:venn19phys@gmail.com",
+    email: "mailto:venn19@hotmail.com.br",
   },
 };
 
 export const aboutTabs = [
   {
-    id: "design",
-    title: "Design",
-    icon: "Palette",
+    id: "ia",
+    title: "IA & Dados",
+    icon: "Code2",
     description:
-      "Criação de interfaces modernas, responsivas e com foco na experiência do usuário. Utilizo ferramentas como Figma e princípios de UI/UX para entregar designs que encantam.",
+      "Desenvolvimento de soluções de IA generativa com RAG e LangChain, pipelines de Machine Learning, Visão Computacional com U-Net, NLP com HuggingFace e dashboards interativos com Qlik Sense, Metabase e Streamlit.",
   },
   {
     id: "dev",
     title: "Dev",
     icon: "Code2",
     description:
-      "Desenvolvimento full-stack com Python, JavaScript/TypeScript, React e frameworks modernos. Experiência com APIs REST, bancos de dados e deploy em cloud.",
+      "Desenvolvimento full-stack com Python, SQL, Docker, APIs RESTful (FastAPI, Django), versionamento com Git/GitHub/GitLab, containerização e automação de processos com Web Scraping e ETL.",
   },
   {
     id: "bio",
     title: "Bio",
     icon: "User",
     description:
-      "Graduado em Física com paixão por tecnologia e ciência de dados. Combino pensamento analítico com habilidades de programação para resolver problemas complexos e criar soluções inovadoras.",
+      "Graduado em Física e Mestre em Engenharia Biomédica pela UnB, com pós-graduação em Ciência de Dados. Combino pensamento analítico com habilidades de programação para resolver problemas complexos em IA e análise de dados.",
   },
 ];
 
 export const timeline = [
   {
-    date: "2024",
-    title: "Cientista de Dados Junior",
+    date: "2026 – atual",
+    title: "Assistente de Pesquisa em Ciência de Dados",
     description:
-      "Atuação com análise de dados, machine learning e visualização de dados para tomada de decisões estratégicas.",
+      "IPEDF — Desenvolvimento de dashboards com Metabase e SQL, manipulação de grandes bases de dados e automação com Python.",
   },
   {
-    date: "2022",
-    title: "Desenvolvedor Full Stack",
+    date: "2025",
+    title: "Cientista de Dados / Desenvolvedor de IA",
     description:
-      "Desenvolvimento de aplicações web completas utilizando React, Node.js e bancos de dados SQL/NoSQL.",
+      "CIIA — Soluções ponta-a-ponta para processamento de áudio, diarização com Pyannote, transcrição com Whisper, APIs RESTful e Docker.",
   },
   {
-    date: "2020",
+    date: "2024 – 2026",
+    title: "Residente em Ciência de Dados",
+    description:
+      "MPDFT — IA generativa com RAG/LangChain para consulta jurídica, dashboards com Qlik Sense e otimização de queries SQL/ETL.",
+  },
+  {
+    date: "2024 – 2025",
+    title: "Cientista de Dados e IA",
+    description:
+      "R5Co — Automação via Web Scraping, PLN para análise textual e testes de métricas em LLMs para criação de Chatbots.",
+  },
+  {
+    date: "2023",
+    title: "Estágio em Ciência de Dados",
+    description:
+      "CGEE — Análises exploratórias, modelos de aprendizado de máquina e prototipagem de ferramentas de visualização de dados.",
+  },
+  {
+    date: "2019 – 2024",
+    title: "Tutor Acadêmico",
+    description:
+      "UnB — Tutor de Cálculo I e Introdução à Ciência da Computação (Python), auxiliando alunos e preparando material didático.",
+  },
+];
+
+export const education = [
+  {
+    date: "2024 – 2025",
+    title: "Pós-Graduação em Ciência de Dados",
+    institution: "Instituto Sendtko — Chapecó, SC",
+  },
+  {
+    date: "2021 – 2024",
+    title: "Mestrado em Engenharia Biomédica",
+    institution: "Universidade de Brasília (UnB)",
+    detail: "Segmentação não-supervisionada via U-Net em imagens de TC.",
+  },
+  {
+    date: "2014 – 2019",
     title: "Graduação em Física",
-    description:
-      "Formação em Física com foco em modelagem computacional, análise estatística e métodos numéricos.",
-  },
-  {
-    date: "2018",
-    title: "Início na Programação",
-    description:
-      "Primeiros passos com Python e análise de dados, desenvolvendo scripts para automação e visualização científica.",
+    institution: "Universidade de Brasília (UnB)",
   },
 ];
 
 export const projects = [
   {
-    title: "Data Science Dashboard",
+    title: "IA Generativa Jurídica (RAG)",
     description:
-      "Dashboard interativo para visualização de dados com gráficos dinâmicos e filtros avançados.",
-    technologies: ["Python", "Streamlit", "Pandas", "Plotly"],
+      "Sistema de consulta jurídica inteligente utilizando RAG com LangChain para o MPDFT, integrando múltiplas fontes de dados.",
+    technologies: ["Python", "LangChain", "RAG", "LLMs"],
     github: "https://github.com/Hevenicio",
     gradient: "from-forest to-forest/70",
   },
   {
-    title: "Machine Learning Pipeline",
+    title: "Pipeline de Áudio & Transcrição",
     description:
-      "Pipeline automatizado de ML para predição e classificação com scikit-learn e TensorFlow.",
-    technologies: ["Python", "Scikit-learn", "TensorFlow", "Docker"],
+      "Processamento de áudio em larga escala com diarização de locutores (Pyannote) e transcrição via Whisper, com interface Streamlit.",
+    technologies: ["Python", "Whisper", "Pyannote", "Streamlit", "Docker"],
     github: "https://github.com/Hevenicio",
     gradient: "from-secondary to-muted",
   },
   {
-    title: "Portfolio Website",
+    title: "Segmentação U-Net em TC",
     description:
-      "Website pessoal responsivo com animações modernas e design clean.",
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+      "Segmentação não-supervisionada de imagens de tomografia computadorizada utilizando redes U-Net — dissertação de mestrado.",
+    technologies: ["Python", "TensorFlow", "OpenCV", "Deep Learning"],
     github: "https://github.com/Hevenicio",
     gradient: "from-mint-dark/30 to-forest/50",
+  },
+  {
+    title: "Hackathon Forecast Big Data — 1º Lugar",
+    description:
+      "Modelo preditivo de maior acurácia para previsão de vendas semanais, superando o baseline da Big Data Corp.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "Feature Engineering"],
+    github: "https://github.com/Hevenicio",
+    gradient: "from-primary/20 to-accent/30",
   },
 ];
 
 export const techStack = [
-  "Python", "Pandas", "TensorFlow", "Scikit-learn",
-  "JavaScript", "TypeScript", "React", "HTML5",
-  "CSS", "SQL", "Docker", "Linux",
-  "Streamlit", "OpenCV", "Git",
+  "Python", "SQL", "Docker", "Git",
+  "LangChain", "RAG", "HuggingFace", "NLP",
+  "Scikit-learn", "TensorFlow", "OpenCV", "Streamlit",
+  "Qlik Sense", "Metabase", "FastAPI", "PostgreSQL",
+  "Pandas", "NumPy", "Matplotlib", "LaTeX",
 ];
 
 export const navLinks = [
