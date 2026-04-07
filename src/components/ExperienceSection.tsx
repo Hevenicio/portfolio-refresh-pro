@@ -2,6 +2,20 @@ import { Briefcase } from "lucide-react";
 import { timeline } from "@/data/portfolio";
 
 const ExperienceSection = () => {
+  const count = timeline.length;
+  const height = count * 200;
+  const cx = 50;
+
+  // Build a smooth S-curve path
+  let pathD = `M ${cx} 0`;
+  for (let i = 0; i < count; i++) {
+    const yStart = i * 200;
+    const yEnd = (i + 1) * 200;
+    const yMid = (yStart + yEnd) / 2;
+    const curve = i % 2 === 0 ? 30 : -30;
+    pathD += ` C ${cx} ${yStart + 50}, ${cx + curve} ${yMid}, ${cx} ${yEnd}`;
+  }
+
   return (
     <section id="experiencia" className="py-24 lg:py-32 bg-card/30">
       <div className="container mx-auto px-6 lg:px-20">
@@ -13,7 +27,22 @@ const ExperienceSection = () => {
         </h2>
 
         <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-primary/20 md:-translate-x-px" />
+          {/* Curved SVG line */}
+          <svg
+            className="absolute left-4 md:left-1/2 top-0 h-full -translate-x-1/2 pointer-events-none overflow-visible"
+            viewBox={`0 0 100 ${height}`}
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ width: 80 }}
+          >
+            <path
+              d={pathD}
+              className="stroke-primary/20"
+              strokeWidth="2"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
 
           {timeline.map((item, i) => (
             <div
