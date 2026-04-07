@@ -1,5 +1,5 @@
 import { GraduationCap } from "lucide-react";
-import { timeline } from "@/data/portfolio";
+import { education } from "@/data/portfolio";
 
 const TimelineSection = () => {
   return (
@@ -9,25 +9,21 @@ const TimelineSection = () => {
           Formação
         </p>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-16">
-          Minha jornada
+          Formação acadêmica
         </h2>
 
         <div className="relative max-w-3xl mx-auto">
-          {/* Vertical line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-primary/20 md:-translate-x-px" />
 
-          {timeline.map((item, i) => (
+          {education.map((item, i) => (
             <div
               key={i}
               className={`relative flex items-start mb-12 last:mb-0 ${
                 i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
-              style={{ animationDelay: `${i * 0.15}s` }}
             >
-              {/* Dot */}
               <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-primary -translate-x-1/2 mt-6 z-10 ring-4 ring-background" />
 
-              {/* Content */}
               <div
                 className={`ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${
                   i % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8 md:ml-auto"
@@ -44,8 +40,13 @@ const TimelineSection = () => {
                     {item.title}
                   </h3>
                   <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-                    {item.description}
+                    {item.institution}
                   </p>
+                  {item.detail && (
+                    <p className="font-mono text-xs text-muted-foreground/70 mt-1 italic">
+                      {item.detail}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
