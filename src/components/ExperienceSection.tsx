@@ -1,21 +1,21 @@
-import { GraduationCap } from "lucide-react";
-import { education } from "@/data/portfolio";
+import { Briefcase } from "lucide-react";
+import { timeline } from "@/data/portfolio";
 
-const TimelineSection = () => {
+const ExperienceSection = () => {
   return (
-    <section id="formacao" className="py-24 lg:py-32">
+    <section id="experiencia" className="py-24 lg:py-32 bg-card/30">
       <div className="container mx-auto px-6 lg:px-20">
         <p className="font-mono text-xs font-bold tracking-widest text-muted-foreground uppercase mb-4">
-          Formação
+          Experiência
         </p>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-16">
-          Formação acadêmica
+          Trajetória profissional
         </h2>
 
         <div className="relative max-w-3xl mx-auto">
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-primary/20 md:-translate-x-px" />
 
-          {education.map((item, i) => (
+          {timeline.map((item, i) => (
             <div
               key={i}
               className={`relative flex items-start mb-12 last:mb-0 ${
@@ -31,7 +31,7 @@ const TimelineSection = () => {
               >
                 <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group">
                   <div className={`flex items-center gap-2 mb-2 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
-                    <GraduationCap size={14} className="text-primary" />
+                    <Briefcase size={14} className="text-primary" />
                     <span className="font-mono text-xs font-semibold text-primary">
                       {item.date}
                     </span>
@@ -40,13 +40,8 @@ const TimelineSection = () => {
                     {item.title}
                   </h3>
                   <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-                    {item.institution}
+                    {item.description}
                   </p>
-                  {item.detail && (
-                    <p className="font-mono text-xs text-muted-foreground/70 mt-1 italic">
-                      {item.detail}
-                    </p>
-                  )}
                 </div>
               </div>
             </div>
@@ -57,4 +52,4 @@ const TimelineSection = () => {
   );
 };
 
-export default TimelineSection;
+export default ExperienceSection;
