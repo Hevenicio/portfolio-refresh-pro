@@ -13,7 +13,29 @@ const ExperienceSection = () => {
         </h2>
 
         <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-primary/20 md:-translate-x-px" />
+          {/* Curved SVG line */}
+          <svg
+            className="absolute left-4 md:left-1/2 top-0 h-full w-20 md:w-40 -translate-x-1/2 pointer-events-none"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d={`M 50% 0 ${timeline
+                .map((_, i) => {
+                  const segHeight = 100 / timeline.length;
+                  const y1 = segHeight * i + segHeight * 0.3;
+                  const y2 = segHeight * i + segHeight * 0.7;
+                  const yEnd = segHeight * (i + 1);
+                  const dir = i % 2 === 0 ? 30 : -30;
+                  return `C 50% ${y1}%, ${50 + dir}% ${y2}%, 50% ${yEnd}%`;
+                })
+                .join(" ")}`}
+              className="stroke-primary/20"
+              strokeWidth="2"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
 
           {timeline.map((item, i) => (
             <div
