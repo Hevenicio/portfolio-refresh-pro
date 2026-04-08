@@ -75,15 +75,16 @@ const TimelineSection = () => {
                 </div>
               </div>
 
-              <div className={`mt-8 md:mt-0 md:w-[calc(45%-2rem)] ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:ml-auto md:text-left"}`}>
-                <div className="p-6 rounded-[1.75rem] bg-card border border-border hover:border-primary/30 transition-all duration-300 group">
-                  <div className={`flex items-center gap-2 mb-2 ${i % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}>
-                    <GraduationCap size={14} className="text-primary" />
-                    <span className="font-mono text-xs font-semibold text-primary">{item.date}</span>
+              <div className={`mt-8 md:mt-0 md:w-[calc(45%-2rem)] ${i % 2 === 0 ? "md:pr-12" : "md:pl-12 md:ml-auto"}`}>
+                <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group">
+                  <div className="flex items-start justify-between gap-4 mb-3">
+                    <h3 className="font-heading text-lg font-bold text-foreground group-hover:text-primary transition-colors leading-tight">{item.title}</h3>
+                    <span className="shrink-0 font-mono text-xs font-semibold text-primary border border-primary/30 rounded-full px-3 py-1">
+                      {item.date}
+                    </span>
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
-                  <p className="font-mono text-sm text-muted-foreground leading-relaxed">{item.institution}</p>
-                  {item.detail && <p className="font-mono text-xs text-muted-foreground/70 mt-1 italic">{item.detail}</p>}
+                  <p className="font-mono text-sm font-semibold text-primary mb-2">{item.institution}</p>
+                  {item.detail && <p className="font-mono text-sm text-muted-foreground leading-relaxed">{item.detail}</p>}
                 </div>
               </div>
             </div>
