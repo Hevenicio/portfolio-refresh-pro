@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ChevronRight } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { projects } from "@/data/portfolio";
 import { Badge } from "@/components/ui/badge";
 
@@ -6,35 +6,33 @@ const ProjectsSection = () => {
   return (
     <section id="portfolio" className="py-24 lg:py-32">
       <div className="container mx-auto px-6 lg:px-20">
-        <div className="flex items-end justify-between mb-16">
-          <div>
-            <p className="font-mono text-xs font-bold tracking-widest text-muted-foreground uppercase mb-4">
-              Portfólio
-            </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-              Projetos recentes
-            </h2>
-          </div>
-          <a
-            href="https://github.com/Hevenicio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
-          >
-            Ver GitHub <ChevronRight size={16} />
-          </a>
-        </div>
+        <p className="font-mono text-xs font-bold tracking-widest text-muted-foreground uppercase mb-4">
+          Portfólio
+        </p>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-16">
+          Projetos recentes
+        </h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
             <div
               key={i}
-              className="group rounded-2xl border border-border bg-card overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.2)]"
+              className="group rounded-2xl border border-border bg-card overflow-hidden transition-all duration-300 hover:border-primary/30 hover:glow-shadow"
             >
-              <div className="p-6 lg:p-8 space-y-5">
+              {/* Gradient header */}
+              <div className={`h-40 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
+                <span className="font-mono text-5xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors">
+                  {"</>"}
+                </span>
+              </div>
+
+              <div className="p-6 space-y-4">
                 <h3 className="font-heading text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
+                <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
@@ -48,34 +46,7 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <div className="space-y-4 pt-2">
-                  <div>
-                    <p className="font-mono text-[10px] font-bold tracking-widest text-primary uppercase mb-1">
-                      Situação / Desafio
-                    </p>
-                    <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-                      {project.situation}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-mono text-[10px] font-bold tracking-widest text-primary uppercase mb-1">
-                      Ação / Solução
-                    </p>
-                    <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-                      {project.action}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-mono text-[10px] font-bold tracking-widest text-primary uppercase mb-1">
-                      Resultado
-                    </p>
-                    <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-                      {project.result}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 pt-3 border-t border-border">
+                <div className="flex items-center gap-4 pt-2">
                   <a
                     href={project.github}
                     target="_blank"
@@ -92,7 +63,7 @@ const ProjectsSection = () => {
                     className="flex items-center gap-2 font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     <ExternalLink size={16} />
-                    Saber mais <ChevronRight size={14} />
+                    Demo
                   </a>
                 </div>
               </div>
