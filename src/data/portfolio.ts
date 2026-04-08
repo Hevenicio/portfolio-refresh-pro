@@ -103,36 +103,36 @@ export const education = [
 
 export const projects = [
   {
-    title: "IA Generativa Jurídica (RAG)",
-    description:
-      "Sistema de consulta jurídica inteligente utilizando RAG com LangChain para o MPDFT, integrando múltiplas fontes de dados.",
-    technologies: ["Python", "LangChain", "RAG", "LLMs"],
+    title: "Hackathon Forecast Big Data",
+    technologies: ["Pandas", "Scikit-Learn", "Modelagem Preditiva"],
+    situation: "Problema de negócio focado na otimização de estoque através da previsão de vendas semanais.",
+    action: "Implementação de pipeline com feature engineering avançada e treino de modelos preditivos.",
+    result: "1º Lugar (2025). O modelo superou a baseline algorítmica da empresa utilizando 1 ano de dados transacionais.",
     github: "https://github.com/Hevenicio",
-    gradient: "from-forest to-forest/70",
+  },
+  {
+    title: "IA Generativa Jurídica (RAG)",
+    technologies: ["Python", "LangChain", "RAG", "LLMs"],
+    situation: "Necessidade de consulta inteligente a grandes volumes de documentos jurídicos no MPDFT.",
+    action: "Desenvolvimento de sistema RAG com LangChain, integrando múltiplas fontes de dados e embeddings vetoriais.",
+    result: "Redução significativa do tempo de pesquisa jurídica, com respostas contextualizadas e referenciadas.",
+    github: "https://github.com/Hevenicio",
+  },
+  {
+    title: "Segmentação U-Net (Imagens Médicas)",
+    technologies: ["Python", "TensorFlow", "U-Net", "Visão Computacional"],
+    situation: "Necessidade de automatizar a detecção de anomalias em Tomografias Computadorizadas (TC).",
+    action: "Treino de uma rede neural convolucional não-supervisionada para segmentação de alta dimensionalidade.",
+    result: "Extração de regiões de interesse de forma automática, otimizando análises de engenharia biomédica.",
+    github: "https://github.com/Hevenicio",
   },
   {
     title: "Pipeline de Áudio & Transcrição",
-    description:
-      "Processamento de áudio em larga escala com diarização de locutores (Pyannote) e transcrição via Whisper, com interface Streamlit.",
     technologies: ["Python", "Whisper", "Pyannote", "Streamlit", "Docker"],
+    situation: "Demanda por processamento de áudio em larga escala com identificação de locutores.",
+    action: "Desenvolvimento de pipeline com diarização (Pyannote), transcrição (Whisper) e API RESTful com Docker.",
+    result: "Sistema end-to-end com interface Streamlit para análise e exportação de transcrições.",
     github: "https://github.com/Hevenicio",
-    gradient: "from-secondary to-muted",
-  },
-  {
-    title: "Segmentação U-Net em TC",
-    description:
-      "Segmentação não-supervisionada de imagens de tomografia computadorizada utilizando redes U-Net — dissertação de mestrado.",
-    technologies: ["Python", "TensorFlow", "OpenCV", "Deep Learning"],
-    github: "https://github.com/Hevenicio",
-    gradient: "from-mint-dark/30 to-forest/50",
-  },
-  {
-    title: "Hackathon Forecast Big Data — 1º Lugar",
-    description:
-      "Modelo preditivo de maior acurácia para previsão de vendas semanais, superando o baseline da Big Data Corp.",
-    technologies: ["Python", "Scikit-learn", "Pandas", "Feature Engineering"],
-    github: "https://github.com/Hevenicio",
-    gradient: "from-primary/20 to-accent/30",
   },
 ];
 
