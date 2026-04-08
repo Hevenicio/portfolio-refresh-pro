@@ -77,35 +77,27 @@ const ExperienceSection = () => {
           {timeline.map((item, i) => (
             <div
               key={i}
-              className={`relative flex items-start mb-16 last:mb-0 md:min-h-[240px] ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              className={`relative flex items-start mb-16 last:mb-0 md:min-h-[240px] group ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
             >
-              <div
-                ref={(el) => (iconRefs.current[i] = el)}
-                className="absolute left-4 md:left-1/2 -translate-x-1/2 top-8 z-10 flex items-center justify-center"
-              >
-                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center ring-4 ring-background shadow-lg">
-                  <Briefcase size={20} className="text-background" />
+              <div ref={(el) => (iconRefs.current[i] = el)} className="absolute left-4 md:left-1/2 -translate-x-1/2 top-8 z-10">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#a0b1b1] bg-[#64f4ac] text-[#02312b] shrink-0 z-10 shadow-md group-hover:scale-110 transition-transform">
+                  <Briefcase size={18} strokeWidth={2.5} />
                 </div>
               </div>
 
               <div
-                className={`ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:ml-auto"
+                className={`ml-12 md:ml-0 w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] ${i % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:ml-auto"
                   }`}
               >
-                <div className="p-8 rounded-[1.75rem] bg-card border border-border hover:border-primary/30 transition-all duration-300 group shadow-[0_20px_60px_-35px_rgba(0,0,0,0.4)]">
-                  <div className={`flex items-center gap-2 mb-4 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
-                    <Briefcase size={16} className="text-primary" />
-                    <span className="font-mono text-sm font-semibold text-primary">
-                      {item.date}
-                    </span>
+                <div className="p-6 md:p-8 rounded-[1.75rem] bg-[#02312b] text-white border border-transparent hover:border-[#64f4ac]/40 transition-all duration-300 group shadow-xl hover:shadow-2xl hover:-translate-y-2">
+                  <div className="flex flex-col sm:flex-row sm:items-start md:items-center justify-between mb-4 gap-3">
+                    <h1 className="text-[20px] md:text-[22px] font-bold font-sans text-white leading-tight tracking-tight">{item.title}</h1>
+                    <span className="inline-flex items-center rounded-md px-3 py-1 text-[13px] font-bold bg-[#64f4ac]/10 border border-[#64f4ac]/30 text-[#64f4ac] whitespace-nowrap">{item.date}</span>
                   </div>
-                  <h3 className="font-heading text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="font-mono text-base text-muted-foreground leading-8">
-                    {item.description}
-                  </p>
+
+                  <p className="text-[#64f4ac] font-semibold mb-3">{/* optional company/label placeholder */}</p>
+                  <p className="text-[15px] leading-[1.6] text-slate-300 font-medium">{item.description}</p>
                 </div>
               </div>
             </div>

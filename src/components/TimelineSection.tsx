@@ -67,23 +67,23 @@ const TimelineSection = () => {
           {education.map((item, i) => (
             <div
               key={i}
-              className={`relative flex items-start mb-12 last:mb-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+              className={`relative flex items-start mb-12 last:mb-0 group ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
             >
               <div ref={(el) => (iconRefs.current[i] = el)} className="absolute left-1/2 top-8 -translate-x-1/2 z-10">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 border border-primary/30 shadow-sm">
-                  <GraduationCap size={18} className="text-primary" />
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#a0b1b1] bg-[#64f4ac] text-[#02312b] shrink-0 z-10 shadow-md group-hover:scale-110 transition-transform">
+                  <GraduationCap size={18} strokeWidth={2.5} />
                 </div>
               </div>
 
-              <div className={`mt-8 md:mt-0 md:w-[calc(45%-2rem)] ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:ml-auto md:text-left"}`}>
-                <div className="p-6 rounded-[1.75rem] bg-card border border-border hover:border-primary/30 transition-all duration-300 group">
-                  <div className={`flex items-center gap-2 mb-2 ${i % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}>
-                    <GraduationCap size={14} className="text-primary" />
-                    <span className="font-mono text-xs font-semibold text-primary">{item.date}</span>
+              <div className={`mt-8 md:mt-0 w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] ${i % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:ml-auto md:text-left"}`}>
+                <div className="p-6 md:p-8 rounded-[1.75rem] bg-[#02312b] text-white border border-transparent hover:border-[#64f4ac]/40 transition-all duration-300 group shadow-xl hover:shadow-2xl hover:-translate-y-2">
+                  <div className="flex flex-col sm:flex-row sm:items-start md:items-center justify-between mb-4 gap-3">
+                    <h1 className="text-[18px] md:text-[20px] font-bold font-sans leading-tight tracking-tight">{item.title}</h1>
+                    <span className="inline-flex items-center rounded-md px-3 py-1 text-[13px] font-bold bg-[#64f4ac]/10 border border-[#64f4ac]/30 text-[#64f4ac] whitespace-nowrap">{item.date}</span>
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
-                  <p className="font-mono text-sm text-muted-foreground leading-relaxed">{item.institution}</p>
-                  {item.detail && <p className="font-mono text-xs text-muted-foreground/70 mt-1 italic">{item.detail}</p>}
+                  <p className="text-[#64f4ac] font-semibold mb-3">{item.institution}</p>
+                  {item.detail && <p className="text-[14px] leading-relaxed text-slate-300 font-medium mb-1 italic">{item.detail}</p>}
+                  <p className="text-[14px] leading-relaxed text-slate-300 font-medium">{!item.detail ? item.institution : ''}</p>
                 </div>
               </div>
             </div>
