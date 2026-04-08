@@ -47,44 +47,38 @@ export const timeline = [
   {
     date: "2026 – atual",
     title: "Assistente de Pesquisa em Ciência de Dados",
-    company: "IPEDF",
     description:
-      "Desenvolvimento de dashboards com Metabase e SQL, manipulação de grandes bases de dados e automação com Python.",
+      "IPEDF — Desenvolvimento de dashboards com Metabase e SQL, manipulação de grandes bases de dados e automação com Python.",
   },
   {
     date: "2025",
     title: "Cientista de Dados / Desenvolvedor de IA",
-    company: "CIIA",
     description:
-      "Soluções ponta-a-ponta para processamento de áudio, diarização com Pyannote, transcrição com Whisper, APIs RESTful e Docker.",
+      "CIIA — Soluções ponta-a-ponta para processamento de áudio, diarização com Pyannote, transcrição com Whisper, APIs RESTful e Docker.",
   },
   {
     date: "2024 – 2026",
     title: "Residente em Ciência de Dados",
-    company: "MPDFT",
     description:
-      "IA generativa com RAG/LangChain para consulta jurídica, dashboards com Qlik Sense e otimização de queries SQL/ETL.",
+      "MPDFT — IA generativa com RAG/LangChain para consulta jurídica, dashboards com Qlik Sense e otimização de queries SQL/ETL.",
   },
   {
     date: "2024 – 2025",
     title: "Cientista de Dados e IA",
-    company: "R5Co",
     description:
-      "Automação via Web Scraping, PLN para análise textual e testes de métricas em LLMs para criação de Chatbots.",
+      "R5Co — Automação via Web Scraping, PLN para análise textual e testes de métricas em LLMs para criação de Chatbots.",
   },
   {
     date: "2023",
     title: "Estágio em Ciência de Dados",
-    company: "CGEE",
     description:
-      "Análises exploratórias, modelos de aprendizado de máquina e prototipagem de ferramentas de visualização de dados.",
+      "CGEE — Análises exploratórias, modelos de aprendizado de máquina e prototipagem de ferramentas de visualização de dados.",
   },
   {
     date: "2019 – 2024",
     title: "Tutor Acadêmico",
-    company: "UnB",
     description:
-      "Tutor de Cálculo I e Introdução à Ciência da Computação (Python), auxiliando alunos e preparando material didático.",
+      "UnB — Tutor de Cálculo I e Introdução à Ciência da Computação (Python), auxiliando alunos e preparando material didático.",
   },
 ];
 
